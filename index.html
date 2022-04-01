@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .img-gallery {
+            width: 85%;
+            margin: 3rem auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1rem;
+        }
+
+        .secondary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 1rem;
+            column-gap: 1rem;
+        }
+
+        .img-container {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+
+        .img-container>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media(max-width:769px) {
+            .img-gallery {
+                width: 75%;
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-gallery">
+        <div class="img-container big">
+            <img src="./images/english-country-scene-hay-bales-harvest-time-hdr-trees-clouds-39729839.jpg" alt="img-3">
+        </div>
+        <div class="secondary-grid">
+            <div class="img-container">
+                <img src="./images/indir.jpg" alt="img-5">
+            </div>
+            <div class="img-container">
+                <img src="./images/images.jpg" alt="img-4">
+            </div>
+            <div class="img-container">
+                <img src="./images/country-scene-1310875.jpg" alt="img-1">
+            </div>
+            <div class="img-container">
+                <img src="./images/depositphotos_86262080-stock-photo-3rd-world-country-scene.jpg" alt="img-2">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
